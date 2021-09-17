@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Building dashboard with gird and flex</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.1/dist/chart.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="menu-icon">
+        <strong> &#9776;</strong>
+      </div>
+      <header class="header">
+        <div class="header_search">Search...</div>
+        <div class="header_avatar">Logout</div>
+      </header>
+      <aside class="aside">
+        <div class="aside_close-icon">
+          <strong>&times;</strong>
+        </div>
+        <ul class="aside_list">
+          <li class="aside_list-item">Menu item1</li>
+          <li class="aside_list-item">Menu item2</li>
+          <li class="aside_list-item">Menu item3</li>
+          <li class="aside_list-item">Menu item4</li>
+          <li class="aside_list-item">Menu item5</li>
+        </ul>
+      </aside>
+      <main class="main">
+        <div class="main_overview">
+          <div class="overview_card" style="background-color: #7DA0FA;">
+            <div class="overview_card-info">Total Youtube Views</div>
+            <div class="overview_card-icon">Card</div>
+          </div>
+          <div class="overview_card" style="background-color: #4747A1;">
+            <div class="overview_card-info">Overview</div>
+            <div class="overview_card-icon">Card</div>
+          </div>
+          <div class="overview_card" style="background-color: #7978E9;">
+            <div class="overview_card-info">Overview</div>
+            <div class="overview_card-icon">Card</div>
+          </div>
+          <div class="overview_card" style="background-color: #F3797E;">
+            <div class="overview_card-info">Overview</div>
+            <div class="overview_card-icon">Card</div>
+          </div>
+        </div>
+
+
+        <div class="main_cards">
+          <div class="card">
+            <canvas id="myChart"></canvas>
+          </div>
+          <div class="card">
+            <canvas id="myChartc"></canvas>
+          </div>
+          <div class="card">
+            <canvas id="myCharta"></canvas>
+          </div>
+        </div>
+
+
+        <!-- here we have other graphs -->
+<div class="main_overview_a">
+  <div class="overview_card_a" >
+    <canvas id="myChartb"></canvas>
+  </div>
+  <div class="overview_card_a" >
+    <canvas id="myCharty"></canvas>
+  </div>
+</div>
+
+
+
+        <!-- here we have last graphs -->
+        <div class="main_overview_a">
+          <div class="overview_card_a" >
+            <canvas id="myChartp"></canvas>
+          </div>
+          <div class="overview_card_a" >
+            <canvas id="myChartq"></canvas>
+          </div>
+          <div class="overview_card_a" >
+            <canvas id="myChartr"></canvas>
+          </div>
+        </div>
+
+
+
+      </main>
+      <footer class="footer">
+        <div class="footer_copyright">&copy;2020 ISA-VESIT</div>
+        <div class="footer_byline">Made with &hearts;</div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="areachart.js"></script>
+    <script type="text/javascript" src="radarchart.js"></script>
+    <script type="text/javascript" src="linechart.js"></script>
+    <script type="text/javascript" src="doughnutchart.js"></script>
+    <script type="text/javascript" src="horizontalBar.js"></script>
+    <script type="text/javascript" src="polararea.js"></script>
+    <script type="text/javascript" src="mixedcharts.js"></script>
+  </body>
+</html>
