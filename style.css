@@ -4,7 +4,7 @@ body {
   /* color: white; */
   box-sizing: border-box;
   font-family: "Nunito";
-  font-size: 15px;
+  /* font-size: 15px; */
 }
 .grid-container {
   display: grid;
@@ -20,12 +20,13 @@ body {
 
 .header {
   grid-area: header;
-  background-color: whitesmoke;
+  background-color: #fff;
+  
 }
 
 .aside {
   grid-area: aside;
-  background-color: rgb(63, 63, 206);
+  background-color: #E6E6FA;
 }
 
 .main {
@@ -71,11 +72,11 @@ body {
 
 .aside_list-item {
   padding: 20px 20px 20px 40px;
-  color: #ddd;
+  color: #3f3f3f;
 }
 
 .aside_list-item:hover {
-  background-color: royalblue;
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
@@ -161,6 +162,11 @@ body {
       "card1 card3";
     grid-gap: 10px;
   }
+}
+
+.overview_card-icon{
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
 .menu-icon {
