@@ -17,25 +17,13 @@ let chart = new Chart(ctx, {
     labels: employeeLabel,
     datasets: [
       {
-        //  barPercentage: 1.0,
-        //  fill: true,
-        // categoryPercentage: 1.0,
-        // borderRadius: 5,
-        // tension: 0.5,
         label: "Employee Salary",
         backgroundColor: "rgba(200,0,0,0.2)",
-        // borderColor: "#4747A1",
         data: employeeSalaryData,
       },
       {
-        //  barPercentage: 1.0,
-        //  fill: true,
-        // categoryPercentage: 1.0,
-        // borderRadius: 5,
-        // tension: 0.5,
         label: "Employee Age",
         backgroundColor: "rgba(0,0,200,0.2)",
-        // borderColor: "#F09397",
         data: employeeAgeData,
       },
     ],
@@ -70,26 +58,21 @@ let chart = new Chart(ctx, {
 });
 }
 
-dummyChart();
+dummyChart();   // yaha hum dummychart() function ko simply call karenge
 
-//Fetch Data from API
+// yaha hum Fetch karenge Data from that forbes400 ka API
 
 async function getDummyData() {
-//const apiUrl = "http://dummy.restapiexample.com/api/v1/employees"
-const apiUrl = "https://forbes400.herokuapp.com/api/forbes400?limit=10";
+//const apiUrl = "http://dummy.restapiexample.com/api/v1/employees"   //ye main API ka endpoint he 
+const apiUrl = "https://forbes400.herokuapp.com/api/forbes400?limit=10";  // yaha humne sirf first 10 entities liye
 const response = await fetch(apiUrl);
 const barChatData = await response.json();
 console.log(barChatData);
-//   const salary = barChatData.data.map((x) => x.employee_salary)
-//   console.log(salary)
-//   const age = barChatData.data.map((x) => x.employee_age)
-//   console.log(age)
-//   const name = barChatData.data.map((x) => x.employee_name)
-const name = barChatData.map((x) => x.personName);
+const name = barChatData.map((x) => x.personName);  //uss json data se humne sirf personName ka value liya and name me store kiye
 console.log(name);
-const networth = barChatData.map((x) => x.finalWorth);
+const networth = barChatData.map((x) => x.finalWorth); //uss json data se humne sirf finalWorth ka value liya and networth me store kiye
 console.log(networth);
-const pvtworth = barChatData.map((x) => x.archivedWorth);
+const pvtworth = barChatData.map((x) => x.archivedWorth); //uss json data se humne sirf archivedWorth ka value liya and pvtworth me store kiye
 employeeSalaryData = networth;
 employeeAgeData = pvtworth;
 employeeLabel = name;

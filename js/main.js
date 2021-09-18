@@ -36,8 +36,7 @@ async function dummyChart() {
       labels: employeeLabel,
       datasets: [
         {
-           barPercentage: 1.0,
-          // categoryPercentage: 1.0,
+          barPercentage: 1.0,
           borderRadius: 5,
           tension: 0.5,
           label: "Employee Salary",
@@ -46,8 +45,7 @@ async function dummyChart() {
           data: employeeSalaryData,
         },
         {
-           barPercentage: 1.0,
-          // categoryPercentage: 1.0,
+          barPercentage: 1.0,
           borderRadius: 5,
           tension: 0.5,
           label: "Employee Age",
@@ -92,11 +90,6 @@ async function getDummyData() {
   const response = await fetch(apiUrl);
   const barChatData = await response.json();
   console.log(barChatData);
-  //   const salary = barChatData.data.map((x) => x.employee_salary)
-  //   console.log(salary)
-  //   const age = barChatData.data.map((x) => x.employee_age)
-  //   console.log(age)
-  //   const name = barChatData.data.map((x) => x.employee_name)
   const name = barChatData.map((x) => x.personName);
   console.log(name);
   const networth = barChatData.map((x) => x.finalWorth);

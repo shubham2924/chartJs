@@ -17,9 +17,8 @@ let chart = new Chart(ctx, {
     labels: employeeLabel,
     datasets: [
       {
-         barPercentage: 1.0,
-         fill: false,
-        // categoryPercentage: 1.0,
+        barPercentage: 1.0,
+        fill: false,
         borderRadius: 5,
         tension: 0.5,
         label: "Employee Salary",
@@ -28,9 +27,8 @@ let chart = new Chart(ctx, {
         data: employeeSalaryData,
       },
       {
-         barPercentage: 1.0,
-         fill: false,
-        // categoryPercentage: 1.0,
+        barPercentage: 1.0,
+        fill: false,
         borderRadius: 5,
         tension: 0.5,
         label: "Employee Age",

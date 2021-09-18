@@ -18,13 +18,11 @@ let chart = new Chart(ctx, {
     labels: employeeLabel,
     datasets: [
       {
-         barPercentage: 1.0,
-        // categoryPercentage: 1.0,
+        barPercentage: 1.0,
         borderRadius: 3,
         tension: 0.5,
         label: "Employee Age",
         backgroundColor: ['#FFB1C1','#FFE6AA','#9AD0F5','#EBE0FF','#DBF2F2'],
-        // borderColor: "rgb(255, 99, 132)",
         data: employeeSalaryData,
       },
     ],
@@ -67,11 +65,6 @@ const apiUrl = "https://forbes400.herokuapp.com/api/forbes400?limit=5";
 const response = await fetch(apiUrl);
 const barChatData = await response.json();
 console.log(barChatData);
-//   const salary = barChatData.data.map((x) => x.employee_salary)
-//   console.log(salary)
-//   const age = barChatData.data.map((x) => x.employee_age)
-//   console.log(age)
-//   const name = barChatData.data.map((x) => x.employee_name)
 const name = barChatData.map((x) => x.personName);
 console.log(name);
 const networth = barChatData.map((x) => x.finalWorth);
